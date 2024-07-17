@@ -30,9 +30,12 @@ const Comments = ({ post }) => {
   useEffect(() => {
     console.log(post);
     const getComments = async () => {
-      const res = await axios.get(`http://localhost:5000/getAllcomments`, {
-        params: { postId: post._id },
-      });
+      const res = await axios.get(
+        `https://blog-application-mern-srvu.onrender.com/getAllcomments`,
+        {
+          params: { postId: post._id },
+        }
+      );
       setListcomments(res.data);
 
       if (res.status === 200) {
@@ -49,7 +52,7 @@ const Comments = ({ post }) => {
     e.preventDefault();
 
     const responce = await axios.post(
-      `http://localhost:5000/addcomment`,
+      `https://blog-application-mern-srvu.onrender.com/addcomment`,
       comment
     );
 

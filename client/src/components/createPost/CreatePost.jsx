@@ -34,7 +34,10 @@ const CreatePost = () => {
 
   const savePost = async (e) => {
     e.preventDefault();
-    let res = await axios.post(`http://localhost:5000/postBlog`, post);
+    let res = await axios.post(
+      `https://blog-application-mern-srvu.onrender.com/postBlog`,
+      post
+    );
     if (res.status === 200) {
       alert("published sucessfull");
       localStorage.setItem("accessToken", currentaccesstoken);
@@ -51,7 +54,7 @@ const CreatePost = () => {
         data.append("file", file);
 
         const responce = await axios.post(
-          `http://localhost:5000/file/uploadimage`,
+          `https://blog-application-mern-srvu.onrender.com/file/uploadimage`,
           data
         );
 

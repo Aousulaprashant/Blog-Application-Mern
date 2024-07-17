@@ -19,9 +19,12 @@ const Detailview = () => {
 
   useEffect(() => {
     const fetchDetails = async () => {
-      const responce = await axios.get(`http://localhost:5000/getPostbyId`, {
-        params: { id: id },
-      });
+      const responce = await axios.get(
+        `https://blog-application-mern-srvu.onrender.com/getPostbyId`,
+        {
+          params: { id: id },
+        }
+      );
 
       if (responce.status === 200) {
         setpost(responce.data);
@@ -35,9 +38,12 @@ const Detailview = () => {
   }, []);
 
   const deletepost = async () => {
-    const responce = await axios.delete(`http://localhost:5000/deletePost`, {
-      params: { id: id },
-    });
+    const responce = await axios.delete(
+      `https://blog-application-mern-srvu.onrender.com/deletePost`,
+      {
+        params: { id: id },
+      }
+    );
 
     if (responce.status === 200) {
       console.log("deleted sucessfully");

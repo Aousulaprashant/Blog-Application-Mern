@@ -33,9 +33,12 @@ const Signin = ({ checkuserlogin }) => {
     e.preventDefault();
 
     try {
-      const res = await axios.post(`http://localhost:5000/signup`, {
-        ...signupdetails,
-      });
+      const res = await axios.post(
+        `https://blog-application-mern-srvu.onrender.com/signup`,
+        {
+          ...signupdetails,
+        }
+      );
       console.log(res.data);
 
       if (res.status === 400) {
@@ -55,9 +58,12 @@ const Signin = ({ checkuserlogin }) => {
     e.preventDefault();
 
     try {
-      const res = await axios.post(`http://localhost:5000/login`, {
-        ...signupdetails,
-      });
+      const res = await axios.post(
+        `https://blog-application-mern-srvu.onrender.com/login`,
+        {
+          ...signupdetails,
+        }
+      );
 
       if (res.status === 200) {
         alert("login sucess full");

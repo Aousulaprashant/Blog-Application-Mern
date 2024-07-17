@@ -36,9 +36,13 @@ const EditPost = () => {
 
   const UpdatePost = async (e) => {
     e.preventDefault();
-    let res = await axios.put(`http://localhost:5000/UpdatePost`, post, {
-      params: { id: id },
-    });
+    let res = await axios.put(
+      `https://blog-application-mern-srvu.onrender.com/UpdatePost`,
+      post,
+      {
+        params: { id: id },
+      }
+    );
     if (res.status === 200) {
       alert("published sucessfull");
       localStorage.setItem("accessToken", currentaccesstoken);
@@ -52,9 +56,12 @@ const EditPost = () => {
 
   useEffect(() => {
     const fetchdata = async () => {
-      const res = await axios.get(`http://localhost:5000/getPostbyId`, {
-        params: { id: id },
-      });
+      const res = await axios.get(
+        `https://blog-application-mern-srvu.onrender.com/getPostbyId`,
+        {
+          params: { id: id },
+        }
+      );
 
       if (res.status === 200) {
         setpost(res.data);
@@ -73,7 +80,7 @@ const EditPost = () => {
         data.append("file", file);
 
         const responce = await axios.post(
-          `http://localhost:5000/file/uploadimage`,
+          `https://blog-application-mern-srvu.onrender.com/file/uploadimage`,
           data
         );
 

@@ -9,9 +9,12 @@ const Comment = ({ comment, settoggle }) => {
   const removeComment = (e) => {
     e.preventDefault();
     const removedapi = async () => {
-      const res = await axios.delete(`http://localhost:5000/deleteComment`, {
-        data: { _id: comment._id },
-      });
+      const res = await axios.delete(
+        `https://blog-application-mern-srvu.onrender.com/deleteComment`,
+        {
+          data: { _id: comment._id },
+        }
+      );
 
       if (res.status === 200) {
         settoggle((prevState) => !prevState);
