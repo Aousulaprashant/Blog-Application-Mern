@@ -10,7 +10,7 @@ const Comment = ({ comment, settoggle }) => {
     e.preventDefault();
     const removedapi = async () => {
       const res = await axios.delete(
-        `https://blog-application-mern-r0vj.onrender.com/deleteComment`,
+        `https://blog-application-mern-1.onrender.com/deleteComment`,
         {
           data: { _id: comment._id },
         }

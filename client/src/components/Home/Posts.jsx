@@ -11,7 +11,7 @@ export const Posts = () => {
       const currCategory = catagory ? catagory : "ALL";
 
       const responce = await axios.get(
-        `https://blog-application-mern-r0vj.onrender.com/getAllPosts?category=${currCategory}`
+        `https://blog-application-mern-1.onrender.com/getAllPosts?category=${currCategory}`
       );
       if (responce.status === 200) {
         // console.log(responce.data);

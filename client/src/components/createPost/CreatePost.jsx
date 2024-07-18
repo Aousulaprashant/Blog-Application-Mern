@@ -35,7 +35,7 @@ const CreatePost = () => {
   const savePost = async (e) => {
     e.preventDefault();
     let res = await axios.post(
-      `https://blog-application-mern-r0vj.onrender.com/postBlog`,
+      `https://blog-application-mern-1.onrender.com/postBlog`,
       post
     );
     if (res.status === 200) {
@@ -54,7 +54,7 @@ const CreatePost = () => {
         data.append("file", file);
 
         const responce = await axios.post(
-          `https://blog-application-mern-r0vj.onrender.com/file/uploadimage`,
+          `https://blog-application-mern-1.onrender.com/file/uploadimage`,
           data
         );
 

@@ -34,7 +34,7 @@ const Signin = ({ checkuserlogin }) => {
 
     try {
       const res = await axios.post(
-        `https://blog-application-mern-r0vj.onrender.com/signup`,
+        `https://blog-application-mern-1.onrender.com/signup`,
         {
           ...signupdetails,
         }
@@ -59,7 +59,7 @@ const Signin = ({ checkuserlogin }) => {
 
     try {
       const res = await axios.post(
-        `https://blog-application-mern-r0vj.onrender.com/login`,
+        `https://blog-application-mern-1.onrender.com/login`,
         {
           ...signupdetails,
         }

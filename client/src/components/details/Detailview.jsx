@@ -20,7 +20,7 @@ const Detailview = () => {
   useEffect(() => {
     const fetchDetails = async () => {
       const responce = await axios.get(
-        `https://blog-application-mern-r0vj.onrender.com/getPostbyId`,
+        `https://blog-application-mern-1.onrender.com/getPostbyId`,
         {
           params: { id: id },
         }
@@ -39,7 +39,7 @@ const Detailview = () => {
 
   const deletepost = async () => {
     const responce = await axios.delete(
-      `https://blog-application-mern-r0vj.onrender.com/deletePost`,
+      `https://blog-application-mern-1.onrender.com/deletePost`,
       {
         params: { id: id },
       }
