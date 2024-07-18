@@ -31,7 +31,7 @@ const Comments = ({ post }) => {
     console.log(post);
     const getComments = async () => {
       const res = await axios.get(
-        `https://blog-application-mern-srvu.onrender.com/getAllcomments`,
+        `https://blog-application-mern-r0vj.onrender.com/getAllcomments`,
         {
           params: { postId: post._id },
         }
@@ -52,7 +52,7 @@ const Comments = ({ post }) => {
     e.preventDefault();
 
     const responce = await axios.post(
-      `https://blog-application-mern-srvu.onrender.com/addcomment`,
+      `https://blog-application-mern-r0vj.onrender.com/addcomment`,
       comment
     );
 

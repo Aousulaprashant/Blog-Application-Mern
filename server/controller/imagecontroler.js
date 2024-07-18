@@ -1,7 +1,10 @@
 import grid from "gridfs-stream";
 import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-const URL = "http://localhost:5000";
+dotenv.config();
+
+const URL = process.env.BASE_URL;
 let gfs, gridfsBucket;
 const conn = mongoose.connection;
 conn.once("open", () => {

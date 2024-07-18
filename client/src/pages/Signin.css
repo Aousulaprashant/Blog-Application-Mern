@@ -5,21 +5,47 @@
     margin: 0;
     padding: 0;
   }
-  
   body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    height: 100%;
+    margin: 0;
+  }
+  .login-body {
+    position: relative;
+    margin-top: 0px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Ensure content stays within container */
+  }
+  
+  .login-body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../components/IMG/newbackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(3px); /* Apply blur effect */
+    z-index: -1; /* Place it behind the content */
   }
   
   .container {
     max-width: 400px;
     margin: 40px auto;
+    margin-top: 0px;
     padding: 20px;
     background-color: #fff;
+    border-radius: 32px;
+    width: 100%;
     border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    
   }
-  
   .login {
     text-align: center;
   }
@@ -98,3 +124,30 @@
       font-size: 14px;
     }
   }
+
+.blog-h1{
+  padding: 12px;
+  color: #346692;
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
+.blog-h1 span{
+  padding-right: 14px;
+}
+
+.note {
+  font-size: 10px; /* Base font size */
+  color: #333; /* Text color */
+  background-color: #f9f9f9; /* Light background color */
+  padding: 10px 15px; /* Padding for some space around the text */
+  border-left: 5px solid #007BFF; /* Left border for emphasis */
+  border-radius: 4px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 9px 0; /* Space above and below the note */
+}
+
+.note span {
+  font-weight: bold; /* Bold font for emphasis */
+  color: #007BFF; /* Blue color for the note label */
+  display: inline-block; /* To allow margin */
+  margin-right: 5px; /* Space between the label and the text */
+}

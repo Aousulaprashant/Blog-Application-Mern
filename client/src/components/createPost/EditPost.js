@@ -37,7 +37,7 @@ const EditPost = () => {
   const UpdatePost = async (e) => {
     e.preventDefault();
     let res = await axios.put(
-      `https://blog-application-mern-srvu.onrender.com/UpdatePost`,
+      `https://blog-application-mern-r0vj.onrender.com/UpdatePost`,
       post,
       {
         params: { id: id },
@@ -57,7 +57,7 @@ const EditPost = () => {
   useEffect(() => {
     const fetchdata = async () => {
       const res = await axios.get(
-        `https://blog-application-mern-srvu.onrender.com/getPostbyId`,
+        `https://blog-application-mern-r0vj.onrender.com/getPostbyId`,
         {
           params: { id: id },
         }
@@ -80,7 +80,7 @@ const EditPost = () => {
         data.append("file", file);
 
         const responce = await axios.post(
-          `https://blog-application-mern-srvu.onrender.com/file/uploadimage`,
+          `https://blog-application-mern-r0vj.onrender.com/file/uploadimage`,
           data
         );
 
