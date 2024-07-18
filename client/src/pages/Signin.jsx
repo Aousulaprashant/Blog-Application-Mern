@@ -154,7 +154,7 @@ const Signin = ({ checkuserlogin }) => {
               </button>
               <br />
               <p className="note">
-                <span>Note:</span>Password length > 6 ,login , signup takes some
+                <span>Note:</span>Password length &gt 6 ,login , signup takes some
                 time depending on your internet speed
               </p>
               <p>-------------- or ----------------</p>

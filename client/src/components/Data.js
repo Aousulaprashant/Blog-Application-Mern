@@ -4,6 +4,6 @@ export const Data = [
   { id: 2, type: "Movies" },
   { id: 3, type: "Tech" },
   { id: 4, type: "Sports" },
-  { id: 5, type: "Bussinues" },
+  { id: 5, type: "Business" },
   { id: 6, type: "Education" },
 ];

@@ -6,15 +6,16 @@ import { Posts } from "./Posts";
 
 const Home = () => {
   const [searchParams] = useSearchParams();
-
   const category = searchParams.get("category");
   return (
+    
     <div className="home">
+      <h1>P BLOG'S</h1>
       <div className="banner">
         <div className="text-blog">
-          <h1>P BLOG'S</h1>
+          
           <p>
-            Every blog post is a piece of your journey. Share it with the world
+            <marquee>Every blog post is a piece of your journey. Share it with the world</marquee>
           </p>
         </div>
         <img src={Blog} alt="" className="banner-image" />

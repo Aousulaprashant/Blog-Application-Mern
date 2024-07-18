@@ -20,7 +20,7 @@ const PrivateRoute = ({ checklogin, ...props }) => {
   return checklogin ? (
     <>
       <Header />
-      <Outlet />
+       <Outlet />
     </>
   ) : (
     <Navigate replace to="/login" />
